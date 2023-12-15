@@ -71,7 +71,7 @@ def Run(codes, bf=''):
                 bf = std_num.SubVar(x[1], x[2])
             elif x[0] == 'If':
                 if len(x) == 5:
-                    if int(x[1]) != 0:
+                    if int(x[1]) != 0: 
                         bf = Run(x[2], bf)
                     else:
                         if x[4] == '-else':
@@ -79,11 +79,11 @@ def Run(codes, bf=''):
                 else:
                     if int(x[1]) != 0:
                         bf = Run(x[2], bf)
-            # get helpL
-            elif x[0] == 'Ver':
-                print(open('version.txt', 'r', encoding='utf-8').read())
-            elif x[0] in ['Help', 'help', 'HELP']:
-                print('ZH-CN\n', open('help/HowToUseL+.txt', 'r', encoding='utf-8').read())
+            # get helpL 
+            elif x[0] == 'Ver': 
+                print('L+ ver2.8\nby _0x-') 
+            elif x[0] in ['Help', 'help', 'HELP']: 
+                print('-') 
             # exit
             elif x[0] in ['Exit', 'exit', 'EXIT']:
                 global rtn
@@ -114,7 +114,7 @@ if len(sys.argv) == 2:
 else:
     typ = 'Console'
     print('L+ CONSOLE VER2.8')
-    print('TYPE "HELP" GET HELP')
+    print('TYPE "HELP" GET HELP') 
     while not rtn:
         Return = Run(input('# '), Return)
 input(f'\n\nRETURN CODE: {rtn} | PRESS [ENTER] TO EXIT')
