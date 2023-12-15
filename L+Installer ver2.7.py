@@ -1,10 +1,9 @@
 import sys
-# 将打包为.py文件
-open(sys.argv[1]+'.py', 'w', encoding='utf-8').write('''def InputLineNext(*prompt):
+open(sys.argv[1]+'.py', 'w', encoding='utf-8').write('''def InputLineNext(*prompt): 
     a = '\n'
     for i in prompt:
         a += i
-    return input(a)
+    return input(a) 
 
 
 def AddVar(a, b):
@@ -108,7 +107,7 @@ def Run(codes, bf=''):
 
             # run
             # stdin
-            if x[0] == 'InputLN':
+            if x[0] == 'InputLN': 
                 bf = InputLineNext(*x[1:])
             elif x[0] == 'InputL':
                 bf = InputLine(*x[1:])
@@ -148,11 +147,11 @@ def Run(codes, bf=''):
             elif x[0] == 'Sub':
                 bf = SubVar(x[1], x[2])
             # get help
-            elif x[0] == 'Ver':
-                print(open('version.txt', 'r', encoding='utf-8').read())
-            elif x[0] in ['Help', 'help', 'HELP']:
-                print(open('help/HowToUseL+.txt', 'r', encoding='utf-8').read())
-            # exit
+            elif x[0] == 'Ver': 
+                print('ver2.7')  
+            elif x[0] in ['Help', 'help', 'HELP']: 
+                print('-') 
+            # exit 
             elif x[0] in ['Exit', 'exit', 'EXIT']:
                 global rtn
                 rtn = 1
