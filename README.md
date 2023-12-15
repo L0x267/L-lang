@@ -68,4 +68,6 @@ return code
 
 -1.throw error
 
+use utf-8!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 good lock
